@@ -1,0 +1,8 @@
+motor:
+  id: 1
+  title: General Motors
+  body: The wheels on the bus go round and round!
+shed:
+  id: 2
+  title: Train Shed
+  body: Thomas and Henry were very excited about their race today.

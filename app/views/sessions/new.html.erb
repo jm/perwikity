@@ -1,0 +1,22 @@
+<h1 class="page-title">Log In</h1>
+
+<% form_tag session_path do -%>
+  <p>
+    <%= label_tag 'login' %><br />
+    <%= text_field_tag 'login', @login, :class => 'big' %>
+  </p>
+
+  <p>
+    <%= label_tag 'password' %><br/>
+    <%= password_field_tag 'password', nil, :class => 'big' %>
+  </p>
+
+  <p>
+    <%= check_box_tag 'remember_me', '1', @remember_me %>
+    <%= label_tag 'remember_me', 'Remember me' %>
+  </p>
+
+  <div id="meta" class="buttons">
+    <%= submit_tag 'Log in' %> or <%= link_to 'Create a new account', new_user_path %>
+  </div>
+<% end -%>

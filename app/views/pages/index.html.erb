@@ -1,0 +1,24 @@
+<h1 class="page-title">All pages</h1>
+
+<ul id="page-list">
+  <% @pages.each do |page| %>
+  <li>
+    <%= link_to page.title(false), page_path(page) %><br />
+    <span><%= truncate(page.body(false), :length => 100) %></span>
+  </li>
+  <% end %>
+</ul>
+
+
+<div id="meta">
+  <%= will_paginate @pages %>
+  There are a total of <%= @pages.total_entries %> pages, shown here paginated in groups of <%= Page.per_page %>.
+</div>
+
+<% side_block do %>
+  <ul>
+    <li><%= link_to 'Main page', root_path %></li>
+    <li><%= link_to 'Go back to first page', pages_path %></li>
+    <li><%= link_to 'Create new page', new_page_path %></li>
+  </ul>
+<% end %>

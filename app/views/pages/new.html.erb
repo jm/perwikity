@@ -1,0 +1,24 @@
+<h1 class="page-title">Create new page</h1>
+
+<% form_for(@page) do |f| %>
+<%= f.error_messages %>
+
+<p>
+  <%= f.label :title %><br />
+  <%= f.text_field :title, :class => "text big" %>
+</p>
+<p>
+  <%= f.label :body %><br />
+  <%= f.text_area :body, :class => "text" %>
+</p>
+<div id="meta" class="buttons">
+  <%= f.submit "Create new page" %> or <%= link_to 'Cancel', pages_path %>
+</div>
+<% end %>
+
+<% side_block do %>
+  <ul>
+    <li><%= link_to 'Main page', root_path %></li>
+    <li><%= link_to 'View the list of all pages', pages_path %></li>
+  </ul>
+<% end %>

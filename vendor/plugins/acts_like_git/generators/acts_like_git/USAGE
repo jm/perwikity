@@ -1,0 +1,11 @@
+Description:
+    Generate a migration to add the necessary column 'version' to a model
+
+Example:
+    ./script/generate acts_as_git Post
+
+    This will create a migration file something like this:
+        db/migrate/add_column_to_posts.rb
+        
+    Then all you need to do is
+        rake db:migrate

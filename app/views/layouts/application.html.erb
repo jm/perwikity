@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title><%= Wiki.name %></title>
+    <%= stylesheet_link_tag 'style', 'syntax' %>
+    <%= javascript_include_tag :defaults %>
+    
+    <% if Wiki.syntax_highlight %>
+      <%= javascript_include_tag 'shCore', 'shBrushRuby' %>
+    <% end %>
+  </head>
+  
+  <body>
+    <div id="top">
+      <% if logged_in? %>
+        <%= render :partial => 'users/badge' %>
+      <% else %>
+        <%= render :partial => 'users/anonymous_badge' %>
+      <% end %>
+      
+      <h1><%= link_to Wiki.name, root_path %></h1>
+      <h2><%= Wiki.description %></h2>
+    </div>
+    
+    <div id="context">
+      <div id="side">
+        <%= yield :side %>
+      </div>
+      
+      <div id="content">
+        <%= render :partial => 'shared/notice' if flash[:notice] %>
+        <%= render :partial => 'shared/error' if flash[:error] %>
+        
+        <%= yield %>
+      </div>
+    </div>
+    
+    <div id="bottom">
+      <%= Wiki.license_line %>
+      <br />powered by perwikity
+    </div>
+    
+    <script language="javascript">
+    window.onload = function () {
+        dp.SyntaxHighlighter.HighlightAll('code');
+    }
+    </script>
+  </body>
+</html>

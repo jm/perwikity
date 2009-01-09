@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: Hello World
+  body: This is my greeting
+  wiki_title: HelloWorld
+  user_id: 1
+  body_html: This is my greeting
+
+two:
+  title: Goodbye
+  body: Hey thanks kbai
+  wiki_title: Goodbye
+  user_id: 1
+  body_html: This is my greeting

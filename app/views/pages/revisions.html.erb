@@ -1,0 +1,21 @@
+<h1 class="page-title">All pages</h1>
+
+<div id="history-list">
+  <ul>
+    <%= history_list_for(@page) %>
+  </ul>
+</div>
+
+<div id="meta">
+  <%= will_paginate @revisions %>
+  There are a total of <%= @revisions.total_entries %> revisions, shown here paginated in groups of 30.
+</div>
+
+<% side_block do %>
+  <ul>
+    <li><%= link_to "Go back to #{@page.title}", page_path(@page) %></li>
+    <li><%= link_to 'Create new page', new_page_path %></li>
+    <li><%= link_to 'Main page', root_path %></li>
+    <li><%= link_to 'View the list of all pages', pages_path %></li>
+  </ul>
+<% end %>

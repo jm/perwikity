@@ -1,0 +1,27 @@
+<h1 class="page-title"><%=h @page.title %></h1>
+
+<%= wiki_link(@page.body_html) %>
+
+<div id="meta">
+  Current revision is <strong><%= @page.log.first.slice(0,7) %></strong> from <strong><%= @page.user ? @page.user.login : "anonymous" %></strong>.<br />
+</div>
+
+<% side_block do %>
+  <ul>
+    <li><%= link_to 'Edit this page', edit_page_path(@page) %></li>
+    <li><%= link_to 'Create new page', new_page_path %></li>
+    <li><%= link_to 'Main page', root_path %></li>
+    <li><%= link_to 'View the list of all pages', pages_path %></li>
+  </ul>
+<% end %>
+
+<% side_block("Revisions") do %>
+  <p>Total revisions: <%= @page.log.size %></p>
+
+  <p>
+    <ul>
+      <%= history_list_for(@page) %>
+    </ul>
+    <p class="meta-link"><%= link_to 'view all revisions', revisions_page_path(@page) %></p>
+  </p>
+<% end %>

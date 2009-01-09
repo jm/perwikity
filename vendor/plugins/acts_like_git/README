@@ -1,0 +1,32 @@
+= ActsLikeGit
+
+ALG automagically saves the history of a given text or string field. It sits over the top of an ActiveRecord model; after a value is committed to the database, the plugin writes the new value to a text file and commits it to a git repository. This way you get all the advantages of using Git as version-control.
+
+Note: this plugin does not play nice with other plugins which override the getters and setters on your model. So if, for example, you're creating a permalink on the same column as the versioning, you're going to run into problems due to the inherent complexity in define_attribute_methods.
+
+== Usage
+
+Declare which attributes are to be versioned:
+
+  class Post < ActiveRecord::Base
+    versioning(:title) do |version|
+      version.repository = '/home/git/repositories/postal.git'
+      version.message = lambda { |post| "Committed by #{post.author.name}" }
+    end
+  end
+
+To view the complete list of changes:
+
+  >> @post = Post.find 15
+  <Post:15>
+  >> @post.title
+  => 'Freddy'
+  >> @post.history(:title)
+  => ['Joe', 'Frank', 'Freddy]
+  >> @post.log
+  => ['bfec2f69e270d2d02de4e8c7a4eb2bd0f132bdbb', '643deb45c12982dde75ba71657792a2dbdda83e6', '1ce6c7368219db7698f4acc3417e656510b4138d']
+  >> @post.revert_to '1ce6c7368219db7698f4acc3417e656510b4138d'
+  >> @post.title
+  => 'Joe'
+
+Copyright (c) 2008 [Jamie van Dyke, Courtenay Gasking, Scott Chacon, Roman Le Négrate], released under the MIT license.

@@ -1,0 +1,33 @@
+== Perwikity -- The picky wiki
+
+Perwikity is a simple to use and elegantly written wiki.
+
+=== Installation and setup
+
+Perwikity requires a few gems and applications be present on your system.
+
+  * Git -- Perwikity handles all of its versioning using Git (keeps the complexity low, the resilience high, and makes it dead simple to backup).  You'll need some version of Git (we don't do anything fancy so any modern version should work).
+  * +grit+ -- We use +grit+ to interact with Git, so you'll need to install the Grit gem, available from mojombo's Github account.
+  * A text formatter -- You'll need either the +RedCloth+ gem (the default) installed, or you can configure Perwikity to use +BlueCloth+ or any other text formatter (you'll just have to do a little extra work to get others to work; see config/initializers/wiki_setup.rb for more information).
+
+To setup Perwikity, you need to do a few things:
+  
+  1. Download the application
+  2. Rename the database.sample.yml file to database.yml
+  3. Change the database details in said database.yml file
+  4. Run rake app:setup to setup the database tables
+  5. Visit config/initializers/wiki_setup.rb to setup your preferences
+  6. Launch script/server
+  7. Monkey around with the design or what have you
+  8. Deploy!
+  
+It's as simple as that. 
+
+=== TODO and the future
+
+* Test those helpers.  Bad Rubyist!  You didn't TDD those!
+* Add ACL-type stuff with admins and roles and all that business
+* Add more user features, such as user pages
+* Syntax highlight when saving page (with configurable backends) rather than in JavaScript (fairly nasty temporary solution...)
+* Add configurable anti-spam measures
+* Search (with configurable engines...maybe...)

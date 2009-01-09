@@ -1,0 +1,314 @@
+BODY {
+  background: #99999f;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 11pt;
+  margin: 0px;
+  padding: 0px;
+}
+
+#top {
+  background: #0A1219;
+  /* background: #222228; */
+  padding-bottom: 0px;
+  border: 0px;
+  border-bottom: 4px solid #000;
+  padding-top: 0.45em;
+}
+
+#top h1 {
+  color: white;
+  font-weight: normal;
+  margin-bottom: 0px;
+  margin-top: 0.45em;
+  margin-left: 0.45em;
+}
+
+#top h1 a {
+  color: white;
+  text-decoration: none;
+}
+
+#top h2 {
+  font-size: 10pt;
+  font-weight: normal;
+  color: #313940;
+  margin-top: 0px;
+  margin-bottom: 1.4em;
+  margin-left: 1.1em;
+  
+}
+
+#badge {
+  background: #111920;
+  padding: 0.45em;
+  float: right;
+  width: 20.5em;
+  margin-right: 0.45em;
+}
+
+#badge img {
+  float: left;
+  margin: 0;
+  margin-right: 0.45em;
+}
+
+#badge span {
+  font-size: 18pt;
+  color: #eaeaea;
+}
+
+#badge p {
+  margin: 2px 0px;
+  color: #515960;
+  font-size: 8pt;
+}
+
+#badge p a {
+  color: white; 
+}
+
+#content h1 {
+  color: black;
+}
+
+#context {
+  padding-top: 0px;
+  clear: both;
+}
+
+#content {
+  background: white;
+  margin-right: 24.5em;
+  padding: 1em;
+  margin-left: 0.75em;
+  font-size: 10pt;
+  text-align: justify;
+}
+
+#side {
+  float: right;
+  width: 21.25em;
+  padding: 0.45em;
+}
+
+#bottom {
+  clear: both;
+  padding: 1em;
+  text-align: center;
+  font-size: 8pt;
+  color: #17171e;
+}
+      
+#content h1, h2, h3, h4, h5, h6 {
+  color: #333;
+  font-weight: normal;
+}
+
+#content h3, h4 {
+  font-weight: bold;
+}
+
+#content h1 {
+  font-size: 18pt;
+}
+
+#content h2 {
+  font-size: 16pt;
+}
+
+#content input.text, textarea.text {
+  width: 100%;
+}
+
+#content input.big {
+  font-size: 18pt;
+}
+
+#content label {
+  font-size: 10pt;
+  font-weight: bold;
+  color: #999;
+}
+
+h1.page-title {
+  font-size: 24pt !important;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.25em;
+  margin-top: 0px;
+  color: #000 !important;
+}
+
+div.side-block {
+  background: #aaaaaf;
+  font-size: 10pt;
+  padding: 0.45em;
+  margin-bottom: 0.45em;
+}
+
+div.side-block p {
+  margin: 0.45em 0em;
+  font-size: 8pt;
+}
+
+div.side-block ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+div.side-block ul li {
+  font-size: 8pt !important;
+  padding: 0.45em 0.2em;
+  border-bottom: 1px solid #88888d;
+  color: #444448;
+}
+
+div.side-block ul li a {
+  text-decoration: none;
+  color: #333337;
+}
+
+div.side-block p.meta-link {
+  text-align: right;
+}
+
+div.side-block p.meta-link a {
+  color: black;
+}
+
+div.side-block ul li a:hover {
+  color: black;
+}
+
+div.side-block h1 {
+  font-size: 12pt;
+  margin: 0px;
+}
+
+#page-list {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+#page-list li {
+  font-size: 14pt;
+  margin: 0.75em 0em;
+  border: 0px;
+  padding: 0em 0em 0.5em 0.5em;
+  border-bottom: 1px solid #ddd;
+}
+
+#page-list li a {
+  text-decoration: none;
+  color: #222;
+}
+
+#page-list li span {
+  font-size: 10pt;
+  color: #999;
+}
+
+#meta .pagination {
+  font-size: 14pt;
+  margin-bottom: 0.5em;
+  color: #666;
+}
+
+#meta .pagination a {
+  color: black;
+  text-decoration: none;
+}
+
+#meta {
+  padding: 1em;
+  font-size: 8pt;
+  text-align: center;
+  background: #eaeaef;
+  border: 1px solid #ddd;
+}
+
+#meta a {
+  color: #333;
+}
+
+#errorExplanation {
+  background: #500000;
+  border: 2px solid #300000;
+  margin: auto;
+  width: 50%;
+  padding: 1em;
+}
+
+#errorExplanation h2 {
+  font-size: 12pt;
+  margin: 0px;
+  color: white;
+  text-align: center;
+}
+
+#errorExplanation p {
+  color: #daa;
+}
+
+#errorExplanation ul {
+  margin: 0px;
+  padding: 0em 2em;
+  color: white;
+}
+
+#history-list ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+#history-list li {
+  font-size: 14pt;
+  margin: 0.75em 0em;
+  border: 0px;
+  padding: 0em 0em 0.5em 0.5em;
+  border-bottom: 1px solid #ddd;
+}
+
+#history-list li span {
+  font-size: 10pt;
+  color: #999;
+}
+
+#history-list a {
+  color: #666;
+}
+
+div.buttons {
+  text-align: left !important;
+}
+
+#notice {
+  color: #333; 
+  text-align: center; 
+  border: 1px solid #DBD95E; 
+  background: #FBF9CE; 
+  padding: 1em; 
+  margin-bottom: 1em;
+  cursor: pointer;
+}
+
+#error {
+  color: #333; 
+  text-align: center; 
+  padding: 1em; 
+  margin-bottom: 1em;  
+  background: #500000;
+  border: 2px solid #300000;
+  color: white;
+  cursor: pointer;
+}
+
+a.missing-page {
+  color: red !important;
+  text-decoration: none;
+  padding: 0px;
+  border: 0px;
+  border-bottom: 1px dotted #red;
+}
