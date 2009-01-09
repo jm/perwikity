@@ -6,9 +6,9 @@ Perwikity is a simple to use and elegantly written wiki.
 
 Perwikity requires a few gems and applications be present on your system.
 
-  * Git -- Perwikity handles all of its versioning using Git (keeps the complexity low, the resilience high, and makes it dead simple to backup).  You'll need some version of Git (we don't do anything fancy so any modern version should work).
-  * +grit+ -- We use +grit+ to interact with Git, so you'll need to install the Grit gem, available from mojombo's Github account.
-  * A text formatter -- You'll need either the +RedCloth+ gem (the default) installed, or you can configure Perwikity to use +BlueCloth+ or any other text formatter (you'll just have to do a little extra work to get others to work; see config/initializers/wiki_setup.rb for more information).
+* Git -- Perwikity handles all of its versioning using Git (keeps the complexity low, the resilience high, and makes it dead simple to backup).  You'll need some version of Git (we don't do anything fancy so any modern version should work).
+* +grit+ -- We use +grit+ to interact with Git, so you'll need to install the Grit gem, available from mojombo's Github account.
+* A text formatter -- You'll need either the +RedCloth+ gem (the default) installed, or you can configure Perwikity to use +BlueCloth+ or any other text formatter (you'll just have to do a little extra work to get others to work; see config/initializers/wiki_setup.rb for more information).
 
 To setup Perwikity, you need to do a few things:
   
