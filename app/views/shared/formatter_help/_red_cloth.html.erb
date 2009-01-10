@@ -1,0 +1,36 @@
+<% side_block "Textile reference" do %>
+  <p>
+  <ul>
+    <li class="collapsed" id="reference">
+      <p>
+        <strong>Text formatting</strong><br />
+        <em>_emphasis_</em><br />
+        <strong>*strong*</strong><br />
+        <del>-deleted-</del><br />
+        <ins>+inserted+</ins><br />
+        ^<sup>super</sup>script^<br />
+        ~<sub>sub</sub>script~<br />
+        <a href="">"link text":url</a><br />
+        Acronym: <acronym title="Wiki">Wiki(What I Know Is)</acronym><br />
+      </p>
+      <p>
+        <strong>Images and layout</strong><br />
+        !imageurl!<br />
+        Link to an image: !imageurl!:url<br />
+      </p>
+      <p>
+        Header: hn. (e.g, h1., h2., h3., etc.)<br />
+        Blockquote: bq.<br />
+        Bulleted list: *<br />
+        Numeric list: #<br />
+      </p>
+      <p>
+        <strong>Tables</strong><br />
+        |a|table|row|<br />
+        |a|table|row|<br />
+      </p>
+    </li>
+  </ul>
+  </p>
+  <p class="meta-link"><%= link_to 'show formatting reference', '#', :onclick => "$('reference').style.height = 'auto'; return false;" %></p>
+<% end %>

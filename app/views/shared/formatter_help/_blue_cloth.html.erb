@@ -1,0 +1,31 @@
+<% side_block "Markdown reference" do %>
+  <p>
+  <ul>
+    <li class="collapsed" id="reference">
+      <p>
+        <strong>Text formatting</strong><br />
+        <em>_emphasis_</em> or <em>*emphasis*</em><br />
+        <strong>**strong**</strong> or <strong>__strong__</strong><br />
+        <strong><em>***really strong***</em></strong> or <strong><em>___really strong___</em></strong><br />
+        <a href="">[link text][url]</a><br />
+      </p>
+      <p>
+        <strong>Images and layout</strong><br />
+        !(http://hello.com/image.png)<br />
+        ![alt text](http://hello.com/image.png)
+      </p>
+      <p>
+        Header: # header 1 #, ## header 2 ##, etc.<br />
+        Blockquote: > at the beginning of the line<br />
+        Bulleted list: * or + or -<br />
+        Numeric list: 1. followed by * for each item<br />
+      </p>
+      <p>
+        <strong>Code / Pre-formatted</strong><br />
+        To render text in <tt>monospace</tt>, indent each line with 4 spaces
+      </p>
+    </li>
+  </ul>
+  </p>
+  <p class="meta-link"><%= link_to 'show formatting reference', '#', :onclick => "$('reference').style.height = 'auto'; return false;" %></p>
+<% end %>

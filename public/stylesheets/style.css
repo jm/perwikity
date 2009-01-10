@@ -312,3 +312,8 @@ a.missing-page {
   border: 0px;
   border-bottom: 1px dotted #red;
 }
+
+#reference {
+  height: 0%;
+  overflow: hidden;
+}
