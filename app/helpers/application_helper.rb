@@ -1,7 +1,7 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
   def wiki_link(text)
-    text.gsub(/\[\[(.*)\]\]/) do |s|
+    text.gsub(/\[\[([^\]\n\|]+)(\|([^\]\n\|]+))?\]\]/) do |s|
       title = $1.to_wiki_title
       link_to(title, page_path(title.to_wiki_title), :class => (Page.find_by_wiki_title(title) ? 'wiki-page' : 'missing-page'))
     end
