@@ -3,11 +3,8 @@ require 'test_helper'
 class PagesControllerTest < ActionController::TestCase
   fixtures :users
 
-  before(:all) do
-    @controller = PagesController.new
-  end
-  
   before do
+    @controller = PagesController.new
     @page ||= Page.create!(:title => "Hello world", :body => "Thanks for all the fish", :user_id => 1)
   end
   
